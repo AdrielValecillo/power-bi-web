@@ -1,11 +1,29 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import DatasetSection from '../components/DatasetSection.astro';
+import InsightsSection from '../components/InsightsSection.astro';
+import ComparisonTool from '../components/ComparisonTool.astro';
 ---
+<BaseLayout title="LLM Benchmark Explorer">
+<Hero />
+<DatasetSection />
 
-<Layout>
-	<Welcome />
-</Layout>
+<section id="report" class="container mx-auto px-4 py-16">
+    <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+        <div class="w-full max-w-7xl mx-auto my-8">
+            <iframe 
+                title="LLM Report"
+                class="w-full min-h-[600px] h-screen md:h-[70vh] lg:h-[85vh] border-0 rounded-lg shadow-xl mx-auto"
+                src="https://app.powerbi.com/reportEmbed?reportId=944bc723-e361-4d7d-b506-69b11f584383&autoAuth=true&ctid=adc9c621-a36c-42e1-9f4a-edc610b1dfd1"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </div>
+</section>
+
+  
+
+<InsightsSection />
+<ComparisonTool />
+</BaseLayout>

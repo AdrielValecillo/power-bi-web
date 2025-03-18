@@ -1,0 +1,99 @@
+---
+// src/components/PowerBISummary.astro
+---
+<section class="container mx-auto px-4 py-16">
+  <h2 class="text-3xl font-bold text-center mb-12">Vistas del Reporte Power BI</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Vista 1 -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+      <h3 class="flex items-center text-xl font-bold mb-4">
+        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9m0 10h2m-2-4h2m-2-4h6m-6 4h6m-6-4h6" />
+        </svg>
+        Comparación de Modelos
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Gráfico de barras agrupadas que compara el rendimiento de los modelos en dos benchmarks clave: MMLU (evaluación académica) y Chatbot Arena (evaluación conversacional). Las barras agrupadas permiten visualizar cómo se desempeñan los modelos en ambos indicadores de manera simultánea.
+      </p>
+    </div>
+
+    <!-- Vista 2 -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+      <h3 class="flex items-center text-xl font-bold mb-4">
+        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2h2a2 2 0 002-2zm0 0V9m0 10h2m-2-4h2m-2-4h6m-6 4h6m-6-4h6" />
+        </svg>
+        Dataset vs Costo
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Gráfico de dispersión que analiza la relación entre el tamaño del dataset de entrenamiento de cada modelo y su costo operativo (precio por millón de tokens). Este análisis ayuda a identificar si existe una correlación entre el volumen de datos usados para entrenar un modelo y su costo.
+      </p>
+    </div>
+
+    <!-- Vista 3 -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+      <h3 class="flex items-center text-xl font-bold mb-4">
+        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3V9M8 21l4-4 4 4M3 4h18M4 4h16v12H4V4z" />
+        </svg>
+        Conteo de Proveedores
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Gráfico de barras agrupadas que muestra la distribución de modelos según sus proveedores (ej: OpenAI, Meta AI, Google, etc.). Las barras permiten comparar cuántos modelos ha desarrollado cada proveedor, proporcionando una visión general de la competencia en el ecosistema de modelos de lenguaje.
+      </p>
+    </div>
+
+    <!-- Vista 4 -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+      <h3 class="flex items-center text-xl font-bold mb-4">
+        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+        Conteo de Modelos Open Source
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Gráfico circular que presenta la proporción de modelos que son de código abierto frente a los modelos propietarios. Esta vista es útil para entender la diversidad del ecosistema y determinar qué tan accesibles son los modelos para la comunidad de desarrolladores y usuarios finales.
+      </p>
+    </div>
+
+    <!-- Vista 5 -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+      <h3 class="flex items-center text-xl font-bold mb-4">
+        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2h2a2 2 0 002-2zm0 0V9m0 10h2m-2-4h2m-2-4h6m-6 4h6m-6-4h6" />
+        </svg>
+        Velocidad vs Latencia
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Gráfico de dispersión que compara dos métricas críticas: la velocidad de generación de tokens (tokens/segundo) y la latencia promedio (tiempo de respuesta). Permite identificar modelos que ofrecen un buen equilibrio entre rapidez y eficiencia, siendo ideal para aplicaciones donde ambas características son importantes.
+      </p>
+    </div>
+
+    <!-- Vista 6 -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+      <h3 class="flex items-center text-xl font-bold mb-4">
+        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+        </svg>
+        Eficiencia Energética
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Gráfico de columnas apiladas que muestra la eficiencia energética de cada modelo, destacando cuánta energía se consume en relación con su rendimiento. Las columnas apiladas permiten comparar diferentes aspectos de la eficiencia energética, como el consumo relativo frente a la potencia computacional utilizada.
+      </p>
+    </div>
+
+    <!-- Vista 7 -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+      <h3 class="flex items-center text-xl font-bold mb-4">
+        <svg class="w-6 h-6 mr-2 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 14v3m4-3v3m4-3V9M8 21l4-4 4 4M3 4h18M4 4h16v12H4V4z" />
+        </svg>
+        Radar Chart de Métricas
+      </h3>
+      <p class="text-gray-600 mb-4">
+        Radar chart que evalúa calidad, velocidad y precios de los modelos en una vista integral. Cada eje del radar representa una métrica, y los polígonos resultantes permiten comparar visualmente cuáles modelos ofrecen un mejor equilibrio entre estas tres áreas.
+      </p>
+    </div>
+  </div>
+</section>

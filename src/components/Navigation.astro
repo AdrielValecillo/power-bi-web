@@ -1,0 +1,38 @@
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+          <a href="/" class="text-xl font-bold text-blue-600">LLM Explorer</a>
+          <!-- Menú para pantallas grandes -->
+          <div class="hidden md:flex space-x-6">
+              <a href="#dataset" class="hover:text-blue-600">Dataset</a>
+              <a href="#report" class="hover:text-blue-600">Reporte</a>
+              <a href="#comparison" class="hover:text-blue-600">Explicación del Reporte</a>
+          </div>
+          <!-- Botón para abrir menú en móviles -->
+          <div class="md:hidden">
+              <button id="menu-btn" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                  </svg>
+              </button>
+          </div>
+      </div>
+      <!-- Menú desplegable en móviles -->
+      <div id="mobile-menu" class="hidden flex flex-col space-y-4 py-4 md:hidden">
+          <a href="#dataset" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Dataset</a>
+          <a href="#report" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Reporte</a>
+          <a href="#comparison" class="block px-4 py-2 text-gray-700 hover:text-blue-600">Explicación del Reporte</a>
+      </div>
+  </div>
+</nav>
+
+<script>
+const menuBtn = document.getElementById("menu-btn");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+}
+</script>
